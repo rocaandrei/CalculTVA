@@ -26,7 +26,7 @@ namespace CalculTVA
             ", suma la care se adauga taxa de Student Member de: " + membership + Environment.NewLine + "Cu un total de: " + (discount5 + membership) +
             " Euro + TVA");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------");
-            Console.WriteLine("SISTEM DE PLATA IN RATE CU DISCOUNT DE 10%");
+            Console.WriteLine("SISTEM DE PLATA IN RATE CU DISCOUNT DE 10%");//cred ca partea asta o sa o fac cu un switch... ca sa nu-mi afiseze toata informatia...
             double avans25 = discount10 * 0.25;
             for (int nrRate = 4; nrRate < 9; nrRate++)
             {
@@ -57,7 +57,7 @@ namespace CalculTVA
                 Console.WriteLine(" Si {0} rate egale a cate: {1} Euro + TVA/fiecare ", nrRate, pretRata);
             }
 
-
+            Console.ReadLine();
 
 
         }
