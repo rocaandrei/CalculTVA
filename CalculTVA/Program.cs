@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CalculTVA
 {
-    public class Program
+    static class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            Console.Write("Introduceti suma în euro fara TVA inclus: ");
-            int suma = int.Parse(Console.ReadLine());
-            Console.Write("Introduceti taxa de student member fara TVA inclus: ");
-            int membership = int.Parse(Console.ReadLine());
-            Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------");
-            double totalFaraTVA = suma + membership;
-            Console.WriteLine("Costul total al programului fara TVA este: " + totalFaraTVA);
-            double discount10 = suma - (suma * 0.10);
-            double discount5 = suma - (suma * 0.05);
+            Application.Run(new Form1()); 
+            
+            /*
+          
             Console.WriteLine("Costul programului cu discountul de 10% inclus este: " + discount10 +
             ", suma la care se adauga taxa de Student Member de: " + membership + Environment.NewLine + "Cu un total de: " + (discount10 + membership) +
             " Euro + TVA");
@@ -58,7 +55,7 @@ namespace CalculTVA
             }
 
             Console.ReadLine();
-
+            */
 
         }
     }
