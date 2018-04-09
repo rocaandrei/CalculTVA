@@ -16,7 +16,6 @@ namespace CalculTVA
         private double sumaTotala;
         private double sumaDiscount5;
         private double sumaDiscount10;
-        private double Rate4CuDiscount5;
         private double avans25;
         private double rata;
         private double restPentruRate;
