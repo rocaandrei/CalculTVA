@@ -13,12 +13,13 @@ namespace CalculTVA
     public partial class Form1 : Form
     {
         #region fields
-        private int sumaTotala;
+        private double sumaTotala;
         private double sumaDiscount5;
         private double sumaDiscount10;
         private double Rate4CuDiscount5;
         private double avans25;
         private double rata;
+        private double restPentruRate;
         #endregion
         public Form1()
         {
@@ -48,16 +49,130 @@ namespace CalculTVA
 
         private void bCalculRate_Click(object sender, EventArgs e)
         {
-            if (rb4Rate.Checked == true)
+            if (cb4Rate.Checked)
             {
-                if (rbDiscount5.Checked == true)
+                if (rbDiscount5.Checked)
                 {
-                    Rate4CuDiscount5 = (sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text));
-                    avans25 = Rate4CuDiscount5 * 0.25;
-                    rata = (Rate4CuDiscount5 - avans25) / 4;
-                    labelSumaTotalaInRate.Text = "Suma impartia in 4 rate a cate " + rata.ToString() + " Euro + TVA/fiecare, plus avans initial de: " + avans25.ToString() + " Euro + TVA.";
+                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 4;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 4 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else if (rbDiscount10.Checked)
+                {
+                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 4;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 4 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else
+                {
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 4;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 4 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
                 }
             }
+            else if (cb5Rate.Checked)
+            {
+                if (rbDiscount5.Checked)
+                {
+                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 5;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 5 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else if (rbDiscount10.Checked)
+                {
+                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 5;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 5 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else
+                {
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 5;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 5 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+            }
+            else if (cb6Rate.Checked)
+            {
+                if (rbDiscount5.Checked)
+                {
+                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 6;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 6 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else if (rbDiscount10.Checked)
+                {
+                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 6;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 6 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else
+                {
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 6;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 6 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+            }
+            else if (cb7Rate.Checked)
+            {
+                if (rbDiscount5.Checked)
+                {
+                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 7;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 7 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else if (rbDiscount10.Checked)
+                {
+                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 7;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 7 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+                else
+                {
+                    avans25 = sumaTotala * 0.25;
+                    restPentruRate = sumaTotala - avans25;
+                    rata = restPentruRate / 7;
+                    labelSumaTotalaInRate.Text = "Avans initial de 25% de: " + avans25.ToString() + " Euro + TV si 7 rate a cate: " + rata.ToString() + " Euro + TVA/fiecare";
+                }
+            }
+            else
+                labelSumaTotalaInRate.Text = "Nu s-a selectat varianta de plata in rate.";
+        }
+
+        private void bReset_Click(object sender, EventArgs e)
+        {
+            labelSumaTotalaFaraTVA.Text = "pending...";
+            tbSumaTotalaFaraTVA.Text = "pending...";
+            tbTaxaMembershipFaraTVA.Text = "pending...";
+            labelSumaCuDiscount.Text = "pending...";
+            labelSumaTotalaInRate.Text = "pending...";
+            rbDiscount5.Checked = false;
+            rbDiscount10.Checked = false;
+            cb4Rate.Checked = false;
+            cb5Rate.Checked = false;
+            cb6Rate.Checked = false;
+            cb7Rate.Checked = false;
+            labelSumaCuDiscount.Text = "pending...";
+
+
         }
     }
 }

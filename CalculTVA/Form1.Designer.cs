@@ -44,12 +44,13 @@
             this.rbDiscount5 = new System.Windows.Forms.RadioButton();
             this.rbDiscount10 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.rb4Rate = new System.Windows.Forms.RadioButton();
-            this.rb5Rate = new System.Windows.Forms.RadioButton();
-            this.rb6Rate = new System.Windows.Forms.RadioButton();
-            this.rb7Rate = new System.Windows.Forms.RadioButton();
             this.bCalculRate = new System.Windows.Forms.Button();
             this.labelSumaTotalaInRate = new System.Windows.Forms.Label();
+            this.cb4Rate = new System.Windows.Forms.CheckBox();
+            this.cb5Rate = new System.Windows.Forms.CheckBox();
+            this.cb6Rate = new System.Windows.Forms.CheckBox();
+            this.cb7Rate = new System.Windows.Forms.CheckBox();
+            this.bReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -201,50 +202,6 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Sistem de plata in rate:";
             // 
-            // rb4Rate
-            // 
-            this.rb4Rate.AutoSize = true;
-            this.rb4Rate.Location = new System.Drawing.Point(225, 146);
-            this.rb4Rate.Name = "rb4Rate";
-            this.rb4Rate.Size = new System.Drawing.Size(57, 17);
-            this.rb4Rate.TabIndex = 18;
-            this.rb4Rate.Text = "4 Rate";
-            this.rb4Rate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rb4Rate.UseVisualStyleBackColor = true;
-            // 
-            // rb5Rate
-            // 
-            this.rb5Rate.AutoSize = true;
-            this.rb5Rate.Location = new System.Drawing.Point(288, 147);
-            this.rb5Rate.Name = "rb5Rate";
-            this.rb5Rate.Size = new System.Drawing.Size(57, 17);
-            this.rb5Rate.TabIndex = 19;
-            this.rb5Rate.Text = "5 Rate";
-            this.rb5Rate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rb5Rate.UseVisualStyleBackColor = true;
-            // 
-            // rb6Rate
-            // 
-            this.rb6Rate.AutoSize = true;
-            this.rb6Rate.Location = new System.Drawing.Point(351, 147);
-            this.rb6Rate.Name = "rb6Rate";
-            this.rb6Rate.Size = new System.Drawing.Size(57, 17);
-            this.rb6Rate.TabIndex = 20;
-            this.rb6Rate.Text = "6 Rate";
-            this.rb6Rate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rb6Rate.UseVisualStyleBackColor = true;
-            // 
-            // rb7Rate
-            // 
-            this.rb7Rate.AutoSize = true;
-            this.rb7Rate.Location = new System.Drawing.Point(414, 147);
-            this.rb7Rate.Name = "rb7Rate";
-            this.rb7Rate.Size = new System.Drawing.Size(57, 17);
-            this.rb7Rate.TabIndex = 21;
-            this.rb7Rate.Text = "7 Rate";
-            this.rb7Rate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.rb7Rate.UseVisualStyleBackColor = true;
-            // 
             // bCalculRate
             // 
             this.bCalculRate.Location = new System.Drawing.Point(498, 144);
@@ -265,17 +222,68 @@
             this.labelSumaTotalaInRate.TabIndex = 23;
             this.labelSumaTotalaInRate.Text = "pending...";
             // 
+            // cb4Rate
+            // 
+            this.cb4Rate.AutoSize = true;
+            this.cb4Rate.Location = new System.Drawing.Point(190, 148);
+            this.cb4Rate.Name = "cb4Rate";
+            this.cb4Rate.Size = new System.Drawing.Size(58, 17);
+            this.cb4Rate.TabIndex = 24;
+            this.cb4Rate.Text = "4 Rate";
+            this.cb4Rate.UseVisualStyleBackColor = true;
+            // 
+            // cb5Rate
+            // 
+            this.cb5Rate.AutoSize = true;
+            this.cb5Rate.Location = new System.Drawing.Point(254, 148);
+            this.cb5Rate.Name = "cb5Rate";
+            this.cb5Rate.Size = new System.Drawing.Size(58, 17);
+            this.cb5Rate.TabIndex = 25;
+            this.cb5Rate.Text = "5 Rate";
+            this.cb5Rate.UseVisualStyleBackColor = true;
+            // 
+            // cb6Rate
+            // 
+            this.cb6Rate.AutoSize = true;
+            this.cb6Rate.Location = new System.Drawing.Point(318, 150);
+            this.cb6Rate.Name = "cb6Rate";
+            this.cb6Rate.Size = new System.Drawing.Size(58, 17);
+            this.cb6Rate.TabIndex = 26;
+            this.cb6Rate.Text = "6 Rate";
+            this.cb6Rate.UseVisualStyleBackColor = true;
+            // 
+            // cb7Rate
+            // 
+            this.cb7Rate.AutoSize = true;
+            this.cb7Rate.Location = new System.Drawing.Point(382, 150);
+            this.cb7Rate.Name = "cb7Rate";
+            this.cb7Rate.Size = new System.Drawing.Size(58, 17);
+            this.cb7Rate.TabIndex = 27;
+            this.cb7Rate.Text = "7 Rate";
+            this.cb7Rate.UseVisualStyleBackColor = true;
+            // 
+            // bReset
+            // 
+            this.bReset.Location = new System.Drawing.Point(27, 289);
+            this.bReset.Name = "bReset";
+            this.bReset.Size = new System.Drawing.Size(162, 23);
+            this.bReset.TabIndex = 28;
+            this.bReset.Text = "Reseteaza tot";
+            this.bReset.UseVisualStyleBackColor = true;
+            this.bReset.Click += new System.EventHandler(this.bReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 341);
+            this.Controls.Add(this.bReset);
+            this.Controls.Add(this.cb7Rate);
+            this.Controls.Add(this.cb6Rate);
+            this.Controls.Add(this.cb5Rate);
+            this.Controls.Add(this.cb4Rate);
             this.Controls.Add(this.labelSumaTotalaInRate);
             this.Controls.Add(this.bCalculRate);
-            this.Controls.Add(this.rb7Rate);
-            this.Controls.Add(this.rb6Rate);
-            this.Controls.Add(this.rb5Rate);
-            this.Controls.Add(this.rb4Rate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.rbDiscount10);
             this.Controls.Add(this.rbDiscount5);
@@ -317,11 +325,12 @@
         private System.Windows.Forms.RadioButton rbDiscount10;
         protected System.Windows.Forms.RadioButton rbDiscount5;
         private System.Windows.Forms.Label label8;
-        protected System.Windows.Forms.RadioButton rb4Rate;
-        protected System.Windows.Forms.RadioButton rb5Rate;
-        protected System.Windows.Forms.RadioButton rb6Rate;
-        protected System.Windows.Forms.RadioButton rb7Rate;
         private System.Windows.Forms.Button bCalculRate;
         private System.Windows.Forms.Label labelSumaTotalaInRate;
+        private System.Windows.Forms.CheckBox cb4Rate;
+        private System.Windows.Forms.CheckBox cb5Rate;
+        private System.Windows.Forms.CheckBox cb6Rate;
+        private System.Windows.Forms.CheckBox cb7Rate;
+        private System.Windows.Forms.Button bReset;
     }
 }
