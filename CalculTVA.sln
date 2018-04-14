@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculTVA", "CalculTVA\CalculTVA.csproj", "{BFD01EFE-83F7-4A85-A5DB-C04BA905ADA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LunchApp", "LunchApp\LunchApp.csproj", "{ABB8474A-251E-4EBE-B158-9D6569A99388}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BFD01EFE-83F7-4A85-A5DB-C04BA905ADA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFD01EFE-83F7-4A85-A5DB-C04BA905ADA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFD01EFE-83F7-4A85-A5DB-C04BA905ADA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB8474A-251E-4EBE-B158-9D6569A99388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB8474A-251E-4EBE-B158-9D6569A99388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB8474A-251E-4EBE-B158-9D6569A99388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB8474A-251E-4EBE-B158-9D6569A99388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

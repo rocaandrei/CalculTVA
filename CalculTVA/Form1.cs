@@ -26,7 +26,15 @@ namespace CalculTVA
         }
         private void b1CalculTotal_Click(object sender, EventArgs e)//aici calculez total initial = cost prog + membership
         {
-            sumaTotala = int.Parse(tbSumaTotalaFaraTVA.Text) + int.Parse(tbTaxaMembershipFaraTVA.Text);
+            //sumaTotala = int.Parse(tbSumaTotalaFaraTVA.Text) + int.Parse(tbTaxaMembershipFaraTVA.Text);
+            double a = 0;
+            double b = 0;
+
+            bool sum = double.TryParse(tbSumaTotalaFaraTVA.Text, out a);
+            bool summ = double.TryParse(tbTaxaMembershipFaraTVA.Text, out b);
+            sumaTotala = a + b;
+
+
             labelSumaTotalaFaraTVA.Text = sumaTotala.ToString() + " Euro + TVA";//calcul suma totala
             //si dupa focusul sa fie pe butonul suma totala 
             tbSumaTotalaFaraTVA.Focus();
@@ -36,12 +44,17 @@ namespace CalculTVA
         {
             if (rbDiscount5.Checked == true)//suma - (suma * 0.05);
             {
-                sumaDiscount5 = int.Parse(tbSumaTotalaFaraTVA.Text) - (int.Parse(tbSumaTotalaFaraTVA.Text) * 0.05);
+                sumaDiscount5 = double.Parse(tbSumaTotalaFaraTVA.Text) - (double.Parse(tbSumaTotalaFaraTVA.Text) * 0.05);
                 labelSumaCuDiscount.Text = Convert.ToString(sumaDiscount5) + " Euro + TVA";
             }
             if (rbDiscount10.Checked == true)//suma - (suma * 0.10);
             {
-                sumaDiscount10 = int.Parse(tbSumaTotalaFaraTVA.Text) - (int.Parse(tbSumaTotalaFaraTVA.Text) * 0.10);
+                if(tbSumaTotalaFaraTVA.Text == null)
+                {
+                    labelSumaCuDiscount.Text = "Nu este introdusa suma, nu se poate calcula.";
+                }
+                else//TO DO: trebuie sa fac generice valorile de tbSumaTotalFaraTVA si tbSumaTotalaFaraTVA = pentru ca daca sus intr-o metoda folosesc try.Parse trebuie sa folosesc aceeasi sintaxa peste tot
+                sumaDiscount10 = double.Parse(tbSumaTotalaFaraTVA.Text) - (double.Parse(tbSumaTotalaFaraTVA.Text) * 0.10);
                 labelSumaCuDiscount.Text = Convert.ToString(sumaDiscount10) + " Euro + TVA";
             }
         }
@@ -52,7 +65,7 @@ namespace CalculTVA
             {
                 if (rbDiscount5.Checked)
                 {
-                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount5 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 4;
@@ -60,7 +73,7 @@ namespace CalculTVA
                 }
                 else if (rbDiscount10.Checked)
                 {
-                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount10 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 4;
@@ -78,7 +91,7 @@ namespace CalculTVA
             {
                 if (rbDiscount5.Checked)
                 {
-                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount5 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 5;
@@ -86,7 +99,7 @@ namespace CalculTVA
                 }
                 else if (rbDiscount10.Checked)
                 {
-                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount10 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 5;
@@ -104,7 +117,7 @@ namespace CalculTVA
             {
                 if (rbDiscount5.Checked)
                 {
-                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount5 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 6;
@@ -112,7 +125,7 @@ namespace CalculTVA
                 }
                 else if (rbDiscount10.Checked)
                 {
-                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount10 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 6;
@@ -130,7 +143,7 @@ namespace CalculTVA
             {
                 if (rbDiscount5.Checked)
                 {
-                    sumaTotala = sumaDiscount5 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount5 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 7;
@@ -138,7 +151,7 @@ namespace CalculTVA
                 }
                 else if (rbDiscount10.Checked)
                 {
-                    sumaTotala = sumaDiscount10 + int.Parse(tbTaxaMembershipFaraTVA.Text);
+                    sumaTotala = sumaDiscount10 + double.Parse(tbTaxaMembershipFaraTVA.Text);
                     avans25 = sumaTotala * 0.25;
                     restPentruRate = sumaTotala - avans25;
                     rata = restPentruRate / 7;
